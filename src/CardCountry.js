@@ -3,7 +3,7 @@ function CardCountry({country}) {
           <div className="card Card">
                <div className="card-image">
                     <figure className="image is-3by2">
-                         <img src={country.flag} alt="Placeholder image" />
+                         <img src={country.flag} alt={`flag of ${country.name}`} />
                     </figure>
                </div>
                <div className="card-content">
