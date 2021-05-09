@@ -10,4 +10,11 @@ users should be able to:
 - Click through to the border countries on the detail page (pending)
 - Toggle the color scheme between light and dark mode *(optional)* (pending)
 
+# Tools & Technologies
+- React.js
+- HTML
+- CSS
+- Javascript
+- Bulma (CSS Framework)
+
 # Website
