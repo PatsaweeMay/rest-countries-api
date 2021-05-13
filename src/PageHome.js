@@ -7,11 +7,13 @@ function PageHome(){
      const [countries, setCountries] = useState([]);
      const [search, setSearch] = useState('');
      const [filter, setFilter] = useState('');
+     const [loading, setLoading] = useState('');
 
      useEffect(() => {
           fetch('https://restcountries.eu/rest/v2/all').then(res => {
                return res.json();
           }).then(resJson => {
+               setLoading('is-hidden');
                setCountries(resJson);
           });
      }, [])
@@ -43,6 +45,9 @@ function PageHome(){
                          </div>
                     </div>
                </section>
+               <div className={`is-flex is-justify-content-center ${loading}`}>
+                    <div className="lds-ripple"><div></div><div></div></div>
+               </div>
                <section className="section">
                     <div className="columns is-mobile is-multiline is-variable is-8">
                          {countryElements}
