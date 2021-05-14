@@ -1,3 +1,5 @@
+import Title from './Title';
+
 function CardCountry({country}) {
      return (
           <div className="card Card">
@@ -9,9 +11,9 @@ function CardCountry({country}) {
                <div className="card-content">
                     <div className="content Card__content">
                          <p className="title font-weight-800 is-size-5">{country.name}</p>
-                         <p><span className="font-weight-600">Population :</span> {country.population}</p>
-                         <p><span className="font-weight-600">Region :</span> {country.region}</p>
-                         <p><span className="font-weight-600">Capital :</span> {country.capital}</p>
+                         <Title title="Population">{country.population}</Title>
+                         <Title title="Region">{country.region}</Title>
+                         <Title title="Capital">{country.capital}</Title>
                     </div>
                </div>
           </div>
